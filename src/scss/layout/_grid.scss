@@ -1,0 +1,30 @@
+// Grids - Mobile First
+
+.grid__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $grid__gap;
+    padding: $grid__gap;
+}
+
+
+.card-container__grid {
+    // Grid placement within .grid__section
+    grid-row: 2;
+
+    // Grid for hortizontal cards
+    display: grid;
+    grid-template-columns: repeat(8, calc(50% - 40px));
+    grid-template-rows: minmax(150px, 1fr);
+    grid-gap: $grid__gap;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+
+}
+
+// Section Wrapper
+.wrapper {
+    margin: auto;
+    max-width: 1300px;
+
+}

@@ -1,0 +1,20 @@
+/* Main SCSS File */
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/buttons';
+
+@import 'pages/about';
+@import 'pages/checkout';
+@import 'pages/contact';
+@import 'pages/homepage';
+@import 'pages/products';
+@import 'pages/singleproduct';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/footer';
+@import 'layout/header';
