@@ -1,0 +1,90 @@
+// About
+.about__heading {
+    grid-column: span 3;
+}
+
+.story-1,
+.story-2,
+.story-3,
+.story-4 {
+    margin-top: 64px;
+}
+
+.story-1 {
+    background-color: $color-yellow;
+    border-radius: 50%;
+    width: 330px;
+    height: 330px;
+    padding: $grid__gap;
+    grid-column: 2/ span 2;
+    grid-row: 2;
+
+    p {
+        position: relative;
+        width: 200px;
+        margin-top: 25px;
+        margin-left: 40px;
+        margin-right: auto;
+    }
+}
+
+.story-2 {
+    background-color: white;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    padding: $grid__gap;
+    grid-column: 1/ span 2;
+    grid-row: 3;
+
+    p {
+        position: relative;
+        width: 300px;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.story-3 {
+
+    background-color: $color-purple;
+    color: white;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    padding: $grid__gap;
+    grid-column: -5/span 3;
+    margin-left: -50px;
+    grid-row: 4;
+
+    p {
+        position: relative;
+        width: 175px;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.story-4 {
+
+    background-color: $color-pink;
+    color: white;
+    border-radius: 50%;
+    width: 380px;
+    height: 380px;
+    padding: $grid__gap;
+    grid-column: 1/ span 3;
+    margin-left: -70px;
+    grid-row: 5;
+
+    p {
+        position: relative;
+        width: 210px;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

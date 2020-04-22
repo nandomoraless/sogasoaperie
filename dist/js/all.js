@@ -1,3 +1,43 @@
+$(function () {
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                target.focus(); // Setting focus
+                if (target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    target.focus(); // Setting focus
+                };
+                return false;
+            }
+        }
+    });
+});
+
+// Product Link
+$(".card__product").click(function () {
+    window.location = $(this).find("a").attr("href");
+    return false;
+});
+// Hamburger Menu
+$(document).ready(function () {
+    $(".menu").click(function () {
+        $(".menu").toggleClass("active");
+        $(".navbar-menu").toggleClass("active");
+
+    });
+    $('.menu a').on("click", function () {
+        $('.menu').removeClass('active');
+    });
+});
+
+// Shopping Cart
 // Tabs
 
 $(document).ready(function () {

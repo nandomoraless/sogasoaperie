@@ -19,3 +19,9 @@ $(function () {
         }
     });
 });
+
+// Product Link
+$(".card__product").click(function () {
+    window.location = $(this).find("a").attr("href");
+    return false;
+});

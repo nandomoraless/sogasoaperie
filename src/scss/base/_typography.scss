@@ -1,3 +1,7 @@
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
 // Sizes - Mobile First
 
 $base-font-size: 20px;
@@ -17,8 +21,7 @@ $font-scale:4;
 h1,
 h2,
 h3 {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 300;
+    font-family: 'Abril Fatface', cursive;
 
 
 }
@@ -26,12 +29,12 @@ h3 {
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: Normal;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1em;
     line-height: 1.5em;
     margin-bottom: $grid__gap;
@@ -39,7 +42,7 @@ p {
 }
 
 .overline {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 12px;
     font-weight: 700;
 

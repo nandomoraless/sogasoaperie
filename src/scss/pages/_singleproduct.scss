@@ -1,0 +1,147 @@
+// Single Product
+.product__soap {
+
+    h1 {
+        grid-column: span 3;
+    }
+
+    img {
+        grid-column: span 4;
+        width: 100%;
+    }
+}
+
+.breadcrumb {
+    grid-column: span 4;
+    text-transform: uppercase;
+
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+.product__icons {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    a {
+        font-size: 3em;
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+}
+
+.product__desc {
+    padding-top: $grid__gap;
+
+    .product__desc--price {
+        grid-column: span 4;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            display: block;
+            font-size: 2em;
+        }
+
+        ul {
+            display: flex;
+
+            a {
+                text-decoration: none;
+                color: $color-yellow
+            }
+        }
+    }
+
+    a {
+        display: block;
+        grid-column: 2/ span 3;
+    }
+
+
+}
+
+/* Tabs for jQuery */
+
+#tabs__desc {
+    display: flex;
+    grid-row: 3;
+    grid-column: span 4;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $grid__gap;
+    overflow: visible;
+
+    >li>a {
+        display: block;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+
+
+    }
+
+
+
+    >li a.inactive {
+
+        color: #999999
+    }
+
+    >li>a:hover {
+
+        border: 0;
+        border-bottom: 1px solid $color-pink;
+        transition: 0.2s;
+
+    }
+
+    >li>a:focus {
+        border-bottom: 2px solid $color-pink;
+
+
+    }
+}
+
+.tabs__container-desc {
+    grid-column: span 4;
+
+    div {
+        img {
+            width: 100%;
+            border-radius: 55%;
+        }
+
+        margin: $half-gap 0;
+    }
+}
+
+.product__recommend {
+    border-top: 1px solid $color-purple;
+    margin-top: $section-gutter;
+    padding-top: $grid__gap;
+
+    h2 {
+        padding-left: $half-gap;
+    }
+
+
+    .product__grid {
+
+        background-color: unset;
+    }
+}

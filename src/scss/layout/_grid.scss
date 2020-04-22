@@ -1,30 +1,22 @@
 // Grids - Mobile First
+body {
+    background-color: #F3D1C4;
+
+}
+
+.grid__section,
+.grid__product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $grid__gap;
+    margin: $half-gap;
+    max-width: 1300px;
+}
 
 .grid__section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: $grid__gap;
-    padding: $grid__gap;
+    padding: 64px $half-gap;
 }
 
-
-.card-container__grid {
-    // Grid placement within .grid__section
-    grid-row: 2;
-
-    // Grid for hortizontal cards
-    display: grid;
-    grid-template-columns: repeat(8, calc(50% - 40px));
-    grid-template-rows: minmax(150px, 1fr);
-    grid-gap: $grid__gap;
-    overflow-x: scroll;
-    scroll-snap-type: x proximity;
-
-}
-
-// Section Wrapper
-.wrapper {
-    margin: auto;
-    max-width: 1300px;
-
+.grid__product:not(.product__desc) {
+    padding-top: 64px;
 }
