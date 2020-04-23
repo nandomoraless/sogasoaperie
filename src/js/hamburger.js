@@ -11,3 +11,24 @@ $(document).ready(function () {
 });
 
 // Shopping Cart
+
+$(document).ready(function () {
+    $(".cart").click(function () {
+        $(".cart").toggleClass("active");
+        $(".cart-menu").toggleClass("active");
+
+    });
+    $('.cart a').on("click", function () {
+        $('.cart').removeClass('active');
+    });
+});
+
+// Remove item 
+
+$(document).ready(function () {
+    $(".close-button").click(function () {
+        $(".checkout-drawer__product").toggleClass("hidden");
+
+
+    });
+});

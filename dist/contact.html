@@ -21,9 +21,9 @@
             <div class="menu">
                 <span></span>
             </div>
-            <span class="notmenu">
-
-            </span>
+            <div class="cart">
+                <span></span>
+            </div>
         </div>
         <nav class="navbar-menu">
 
@@ -56,56 +56,79 @@
             </ul>
 
         </nav>
+
+        <div class="cart-menu">
+
+            <div class="cart-listing">
+
+                <span class="checkout-drawer__title">
+                    Your Cart
+                </span>
+                <div class="checkout-drawer__product">
+                    <img src="./images/product-images/product-blackraspberry.jpg"
+                        alt="checkout drawer product-blackraspberry">
+                    <span class="overline">Black Raspberry vanilla Artisan Bar</span>
+                    <a href="#"><img src="./images/close.svg" alt="close button" class="close-button"></a>
+                </div>
+                <a href="checkout.html" class="button--primary checkout--button">Checkout</a>
+
+            </div>
+
+
+        </div>
+
+
+        </div>
     </header>
 
     <main>
         <div class="img-container">
-            <img src="./images/about-bg.jpg" alt="Products hero image">
+            <img src="./images/contact.jpeg" alt="Contact hero image">
         </div>
-        <div class="wrapper">
-            <section class="grid__section about-us">
-                <div class="about__heading">
-                    <h1>About SoGa</h1>
-                    <p>A journey of my lifetime</p>
-                </div>
+        <section class="grid__section contact">
+            <div class="contact__heading">
+                <h1>Get In Touch</h1>
+                <p>
+                    Feedback, questions welcome!
+                    We’ll get back to you as soon as
+                    we can!
+                </p>
+            </div>
 
-                <div class="story-1" data-aos="fade-left">
-                    <p>
-                        When people ask how I got started on my soap journey. I smile and tell them it really began when
-                        I was a child, but didn’t take hold until randomly passing by a bookstore in the mid-90s and
-                        finding a book on handmade soapmaking
-                    </p>
-                </div>
+            <fieldset class="contact__form">
+                <form action="">
+                    <label for="contact-name" class="overline">Full Name</label>
+                    <input type="text" name="contact-name" id="contact-name" placeholder="Jane Doe">
 
-                <div class="story-2" data-aos="fade-left">
-                    <p>
-                        As a child, well even as an adult I suffer from poor kidney function which really affected my
-                        skin making it extremely dry. Many years of medicated creams had no effect on me. All skincare
-                        we had access to was the commercially available brands. And although they are great cleansers,
-                        they just had no remaining moisturizing value.
-                    </p>
+                    <label for="contact-email" class="overline">Email Address</label>
+                    <input type="text" name="contact-email" id="contact-email" placeholder="janedoe@example.com">
 
-                </div>
-                <div class="story-3" data-aos="fade-right">
-                    <p>
-                        So on a whim I decided to make my first handmade soap and, for the very first time, I lost the
-                        feeling that “my skin was too tight on me” feeling. I am sure many of you can understand how
-                        overjoyed I was!
-                    </p>
+                    <label for="contact-field" class="overline">What would you like to tell/ask us?</label>
+                    <textarea name="contact-field" id="contact-field" placeholder="Hello..."></textarea>
+                </form>
+            </fieldset>
 
-                </div>
 
-                <div class="story-4" data-aos="fade-right">
-                    <p>
-                        We really started to get popular once our products were selected to be in the gift bags of the
-                        press and celebrities who attended GBK’s Oscars Gift Lounge. From that moment on we decided to
-                        branch out and grow a little larger and opened our first brick and mortar shop, which is located
-                        at 86 Albert Street, Winnipeg Manitoba.
-                    </p>
 
-                </div>
-            </section>
-        </div>
+            <a href="#" class="button--primary">Submit</a>
+        </section>
+
+        <section class="grid__section">
+            <div class="contact__heading--map">
+                <h2>
+                    Or Visit Us!
+                </h2>
+                <p>
+                    Stroll on by to say hello
+                </p>
+            </div>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.07315221547!2d-97.14279494835168!3d49.89742993483645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea715c6e3422cd%3A0x373f0f6e402f1d5f!2s84%201%2F2%20Albert%20St%2C%20Winnipeg%2C%20MB%20R3B%201H2!5e0!3m2!1sen!2sca!4v1587661139824!5m2!1sen!2sca"
+                frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        </section>
+
     </main>
     <footer class="grid__section">
         <div class="newsletter">

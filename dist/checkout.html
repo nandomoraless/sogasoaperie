@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoGa Artisan Soaperie - Vegan Bath & Body Bakery</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/all.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="menu">
+                <span></span>
+            </div>
+
+        </div>
+        <nav class="navbar-menu">
+
+            <ul class="menu-listing">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="products.html">Products</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+
+            </ul>
+
+        </nav>
+        <nav class="navbar-menu-md">
+
+            <ul class="menu-listing">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="products.html">Products</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid__section checkout__heading">
+            <h1>Secure Checkout</h1>
+        </section>
+        <section class="grid__section checkout__review">
+
+            <h2>1. Review your order</h2>
+
+
+
+            <img class="checkout__image" src="./images/product-images/product-blackraspberry.jpg"
+                alt="Checkout Black Raspberry Soap Bar">
+            <div class="checkout__review--title">
+                <p>Black Raspberry Vanilla Artisan Bar</p>
+                <label for="checkout-quantity">QTY
+                    <input type="number" min="1" id="checkout-quantity" name="checkout-quantity">
+
+                </label>
+            </div>
+
+            <span class="checkout__review-price">$7.00</span>
+
+            <div class="checkout__review-subtotal">
+                <span>
+                    SUBTOTAL
+                </span>
+                <span class="checkout__review-price">$7.00
+
+                </span>
+            </div>
+            <span>
+                SHIPPING
+            </span>
+            <div class=checkout__review-shipping>
+
+
+                <label for="shipping-country">Country:</label>
+                <select name="shipping-country" id="shipping-country">
+                    <option value="canada">Canada</option>
+                    <option value="cont united states">Continental United States</option>
+                </select>
+                <label for="shipping-province">Province:</label>
+                <select name="shipping-province" id="shipping-province">
+                    <option value="manitoba">Manitoba</option>
+
+                </select>
+            </div>
+
+            <span>DELIVERY METHOD</span>
+            <div class="checkout__review-delivery">
+                <span>$10.00</span>
+                <label for="delivery"> Regular 5-10 Business Days</label>
+                <input type="radio" name="delivery" id="delivery">
+
+            </div>
+
+            <span>QUICK CHECKOUT </span>
+
+            <div id="paypal-button-container">
+                <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
+                    data-sdk-integration-source="button-factory"></script>
+                <script>
+                    paypal.Buttons({
+                        style: {
+                            shape: 'rect',
+                            color: 'gold',
+                            layout: 'vertical',
+                            label: 'paypal',
+
+                        },
+                        createOrder: function (data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: '1'
+                                    }
+                                }]
+                            });
+                        },
+                        onApprove: function (data, actions) {
+                            return actions.order.capture().then(function (details) {
+                                alert('Transaction completed by ' + details.payer.name.given_name +
+                                    '!');
+                            });
+                        }
+                    }).render('#paypal-button-container');
+                </script>
+            </div>
+
+
+        </section>
+        <section class="grid__section checkout__address">
+            <div class="checkout__address-heading">
+                <h2>
+                    2. Delivery Address
+                </h2>
+                <span class="overline">*Field Required</span>
+            </div>
+            <div class="checkout__address-form">
+                <label for="checkout-email" class="overline">Email Address*</label>
+                <input type="text" name="checkout-email" id="checkout-email" placeholder="janedoe@example.com" required>
+
+                <label for="checkout-name" class="overline">Full Name*</label>
+                <input type="text" name="checkout-name" id="checkout-name" placeholder="Jane Doe" required>
+
+                <label for="checkout-phone" class="overline">Phone Number*</label>
+                <input type="tel" name="checkout-phone" max="10" id="checkout-phone" placeholder="(123) 456-7890"
+                    required>
+
+                <label for="checkout-street" class="overline">Street Address*</label>
+                <input type="text" name="checkout-address" id="checkout-address" placeholder="eg Unit 1, 123 Main St."
+                    required>
+                <input type="text" name="checkout-address" id="checkout-address" required>
+
+                <label for="checkout-city" class="overline">City/Town*</label>
+                <input type="text" name="checkout-city" id="checkout-city" required>
+
+
+                <label for="checkout-province" class="overline">Province:</label>
+                <select name="checkout-province" id="checkout-province">
+                    <option value="manitoba">Manitoba</option>
+
+                </select>
+
+                <label for="checkout-postal" class="overline">Postal Code*</label>
+                <input type="text" name="checkout-postal" id="checkout-postal" required>
+
+                <label for="checkout-country" class="overline">Country:</label>
+                <select name="checkout-country" id="checkout-country">
+                    <option value="canada">Canada</option>
+                    <option value="cont united states">Continental United States</option>
+                </select>
+
+                <label for="billing-address" class="input-container">Same Billing Address
+                    <input type="radio" name="billing-address" id="billing-address">
+                    <span class="checkmark"></span></label>
+
+
+            </div>
+
+        </section>
+
+        <section class="grid__section checkout__payment">
+            <h2>
+                3. Select Payment Method
+            </h2>
+            <div class="checkout__payment-method">
+                <label for="payment-method">CREDIT CARD</label>
+                <input type="radio" name="payment-method" id="payment-method">
+
+            </div>
+            <div class="checkout__payment-method">
+                <label for="payment-method">DEBIT</label>
+                <input type="radio" name="payment-method" id="payment-method">
+
+            </div>
+            <h3>Order Summary</h3>
+            <div class="checkout__payment-summary">
+
+                <span class="summary-title">
+                    Black Raspberry Vanilla Artisan Bar
+                </span>
+
+                <span>
+                    QTY: 1
+                </span>
+
+                <span class="checkout__review-price">
+                    $7.00
+                </span>
+            </div>
+
+            <div class="checkout__payment-sub">
+                <div>
+                    <span>SUBTOTAL</span>
+                    <span class="checkout__review-price"> $7.00</span>
+                </div>
+
+                <div>
+                    <span>SHIPPING</span>
+                    <span class="checkout__review-price"> $10.00</span>
+                </div>
+
+                <div>
+                    <span>
+                        SALES TAX
+                    </span>
+                    <span class="checkout__review-price">
+                        $2.04
+                    </span>
+
+                </div>
+
+                <div class="checkout__payment-total">
+                    <span>
+                        ORDER TOTAL
+                    </span>
+                    <span>
+                        $19.04
+                    </span>
+
+                </div>
+
+            </div>
+
+            <a href="#" class="button--primary">PAY NOW</a>
+
+
+        </section>
+
+    </main>
+    <footer class="grid__section">
+        <div class="newsletter">
+            <h4> Newsletter</h4>
+            <fieldset>
+                <form action="">
+                    <label for="name" class="overline">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Jane Doe">
+
+                    <label for="email" class="overline">Email</label>
+                    <input type="text" name="email" id="email" placeholder="janedoe@example.com">
+                </form>
+
+                <button class="button--primary" id="subscribe">
+
+                    Subscribe
+
+                </button>
+            </fieldset>
+
+        </div>
+
+        <div class="social-media">
+            <h4>
+                Follow Us!
+            </h4>
+            <div class="social-media--icons">
+
+
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <h4>
+                Quick Links
+            </h4>
+
+            <ul>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Privacy Policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Get a hold of us!</h4>
+            <div>
+                <span>84 1/2 Albert st.</span>
+                <span>Winnipeg, MB, R3B 1G2</span>
+                <span>(204) 615-2284</span>
+            </div>
+
+        </div>
+
+
+    </footer>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

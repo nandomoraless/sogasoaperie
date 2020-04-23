@@ -1,0 +1,225 @@
+// Checkout
+
+.checkout__heading {
+    h1 {
+        grid-column: span 4;
+    }
+}
+
+.checkout__review {
+    h2 {
+        grid-column: span 4;
+    }
+
+    .checkout__image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+
+    }
+
+}
+
+.checkout__review--title {
+    grid-column: 2 /span 2;
+}
+
+.checkout__review-price {
+    grid-column: 4;
+    align-self: end;
+    font-weight: bold;
+
+}
+
+#checkout-quantity {
+    width: 100px;
+    height: 36px;
+}
+
+.checkout__review-subtotal {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 4;
+
+    border-top: 1px solid white;
+    padding-top: $grid__gap;
+
+}
+
+.checkout__review-shipping {
+    grid-column: span 4;
+
+    #shipping-country,
+    #shipping-province {
+        width: 100%;
+        margin-bottom: $grid__gap;
+        height: 36px;
+        border: 0;
+
+    }
+}
+
+.checkout__review-delivery {
+    grid-column: span 4;
+    display: flex;
+    align-items: center;
+    background-color: $color-light-grey;
+    border-radius: 5px;
+
+    padding: $grid__gap;
+
+    span {
+        font-weight: bold;
+        margin-right: 64px;
+    }
+
+    input {
+        width: unset;
+    }
+
+
+}
+
+#paypal-button-container {
+    grid-column: span 4;
+    z-index: 0;
+}
+
+.checkout__address-form {
+    grid-column: span 4;
+}
+
+// Checkout Step 2 
+
+.checkout__address-heading {
+    grid-column: span 4;
+
+    span {
+        color: grey;
+    }
+}
+
+#checkout-province,
+#checkout-country {
+    width: 100%;
+    margin-bottom: $grid__gap;
+    height: 36px;
+    border: 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+}
+
+.checkmark {
+    display: block;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    margin-right: $grid__gap;
+}
+
+.input-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.input-container input:checked~.checkmark {
+    background-color: $color-pink;
+    padding: 1px;
+}
+
+.checkmark:after {
+    content: "";
+    display: none;
+}
+
+.input-container input:checked~.checkmark:after {
+    display: block;
+}
+
+// Step 3 Payment 
+
+.checkout__payment {
+    h2 {
+        grid-column: span 4;
+    }
+
+    h3 {
+        grid-column: span 4;
+    }
+
+    .button--primary {
+        grid-row: 7;
+        grid-column: 3 / span 2;
+
+    }
+}
+
+.checkout__payment-method {
+
+    grid-column: span 4;
+    display: flex;
+    align-items: center;
+    background-color: $color-light-grey;
+    border-radius: 5px;
+    justify-content: space-around;
+
+    padding: $half-gap;
+
+    input {
+        width: unset;
+    }
+
+
+}
+
+.checkout__payment-summary {
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+
+    .summary-title {
+        width: 150px;
+    }
+
+}
+
+.checkout__payment-sub {
+
+    grid-column: span 4;
+    border-top: 1px solid white;
+    padding-top: $grid__gap;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $grid__gap;
+
+
+    }
+
+    .checkout__payment-total {
+        background: $color-light-pink;
+        color: white;
+        padding: $half-gap;
+        border-radius: 5px;
+    }
+
+
+}
