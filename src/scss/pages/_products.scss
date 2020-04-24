@@ -2,6 +2,7 @@
 .img-container {
     position: relative;
 
+
     img {
         display: block;
 
@@ -25,30 +26,89 @@
 }
 
 .products__heading {
-    grid-row: 2;
     grid-column: 1/ span 3;
 }
 
 .filters {
-    grid-row: 3;
-    display: flex;
+    grid-row: 2;
+    grid-column: span 2;
+    align-self: center;
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $color-pink;
+    }
+
+    input {
+        width: unset;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    input:checked~.checkmark {
+        background-color: $color-pink;
+    }
+
+    .checkmark {
+        margin: $half-gap;
+        border: 2px solid $color-pink;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+
+    .checkmark:hover {
+        background-color: $color-pink;
+
+    }
 
 }
 
 .product__grid {
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(171px, 1fr));
     margin: auto;
     gap: $grid__gap;
     padding: 4em $half-gap;
+    max-width: 600px;
+
+    .button--cart {
+        grid-column: 2;
+    }
+
+    .button--cart.hidden {
+        display: none;
+    }
+
 
 }
+
+.product__grid.page2 {
+    display: none;
+
+}
+
+.page2.active {
+    display: grid;
+    padding-top: unset;
+
+}
+
 
 .card__product {
     border: 1px solid $color-pink;
     padding: $half-gap;
-    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 
     .card--image {
@@ -92,5 +152,44 @@
                 text-decoration: none;
             }
         }
+    }
+}
+
+
+@include for-tablet-landscape-up {
+
+    .img-container {
+        position: absolute;
+        z-index: -1;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        max-width: 1200px;
+    }
+
+    .img-container::after {
+
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), #F3D1C4 30%);
+
+
+    }
+
+    .products__heading {
+        grid-row: 2;
+        grid-column: 2/span 2;
+    }
+
+    .filters {
+        align-self: flex-end;
+    }
+
+    .filters-1 {
+        grid-row: 2;
+        grid-column: 4;
+    }
+
+    .filters-2 {
+        grid-column: 5;
     }
 }

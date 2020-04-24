@@ -19,9 +19,9 @@
             <div class="menu">
                 <span></span>
             </div>
-            <span class="notmenu">
-
-            </span>
+            <div class="cart">
+                <span></span>
+            </div>
         </div>
         <nav class="navbar-menu">
 
@@ -54,101 +54,130 @@
             </ul>
 
         </nav>
+
+        <div class="cart-menu">
+
+            <div class="cart-listing">
+
+                <span class="checkout-drawer__title">
+                    Your Cart
+                </span>
+                <div class="checkout-drawer__product">
+                    <img src="./images/product-images/product-blackraspberry.jpg"
+                        alt="checkout drawer product-blackraspberry">
+                    <span class="overline">Black Raspberry vanilla Artisan Bar</span>
+                    <a href="#"><img src="./images/close.svg" alt="close button" class="close-button"></a>
+                </div>
+                <a href="checkout.html" class="button--primary checkout--button">Checkout</a>
+
+            </div>
+
+
+        </div>
+
+
+        </div>
     </header>
     <main>
-        <section class="grid__product product__soap">
-            <div class="breadcrumb">
+        <div class="grid__section product-page">
+            <section class="grid__product product__soap">
+                <div class="breadcrumb">
 
-                <a href="products.html">
-                    <span class="overline">
-                        Products >
-                    </span>
+                    <a href="products.html">
+                        <span class="overline">
+                            Products >
+                        </span>
 
-                </a>
-                <a href="product-single.html">
-                    <span class="overline">
-                        Soap
-                    </span>
+                    </a>
+                    <a href="product-single.html">
+                        <span class="overline">
+                            Soap
+                        </span>
 
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <h1>
-                Black Raspberry Vanilla Artisan Bar
-            </h1>
+                <h1>
+                    Black Raspberry Vanilla Artisan Bar
+                </h1>
 
-            <div class="product__icons">
-                <a href="#" class="fa fa-heart"></a>
-                <a href="#" class="fa fa-share-alt"></a>
-            </div>
-            <img src="./images/product-images/product-blackraspberry.jpg" alt="Black Raspberry Vanilla Artisan Bar">
+                <div class="product__icons">
+                    <a href="#" class="fa fa-heart"></a>
+                    <a href="#" class="fa fa-share-alt"></a>
+                </div>
+                <img src="./images/product-images/product-blackraspberry.jpg" alt="Black Raspberry Vanilla Artisan Bar">
 
 
-        </section>
-        <section class="grid__product product__desc">
-            <div class="product__desc--price">
-                <span>$7.00</span>
-                <div>
-                    <ul>
-                        <li><a href="" class="fa fa-star"></a></li>
-                        <li><a href="" class="fa fa-star"></a></li>
-                        <li><a href="" class="fa fa-star"></a></li>
-                        <li><a href="" class="fa fa-star"></a></li>
-                        <li><a href="" class="fa fa-star"></a></li>
-                    </ul>
+            </section>
+            <section class="grid__product product__desc">
+                <div class="product__desc--price">
+                    <span>$7.00</span>
+                    <div>
+                        <ul>
+                            <li><a href="" class="fa fa-star"></a></li>
+                            <li><a href="" class="fa fa-star"></a></li>
+                            <li><a href="" class="fa fa-star"></a></li>
+                            <li><a href="" class="fa fa-star"></a></li>
+                            <li><a href="" class="fa fa-star"></a></li>
+                        </ul>
 
-                    <p>(1 Customer Review)</p>
+                        <p>(1 Customer Review)</p>
+                    </div>
+
+
                 </div>
 
 
-            </div>
+                <label for="quantity" class="hidden">
+                    <input id="number" type="number" min="0" name="quantity">
+                </label>
 
+                <a href="#" class="button--cart">Add To Cart</a>
+                <ul id="tabs__desc">
 
-            <label for="quantity" class="hidden">
-                <input id="number" type="number" min="0" name="quantity">
-            </label>
+                    <li><a tabindex="0" role="button" id="pick1">Description</a></li>
+                    <li><a tabindex="0" role="button" id="pick2">Details</a></li>
 
-            <a href="#" class="button--cart">Add To Cart</a>
-            <ul id="tabs__desc">
+                </ul>
 
-                <li><a tabindex="0" role="button" id="pick1">Description</a></li>
-                <li><a tabindex="0" role="button" id="pick2">Details</a></li>
+                <div class="tabs__container-desc" id="pick1D">
+                    <div>
+                        <p>
+                            SoGa bars are handmade in small batches, with only vegan, sustainable oils used in their
+                            creation.
 
-            </ul>
-
-            <div class="tabs__container-desc" id="pick1D">
-                <div>
+                            Each handmade SoGa bar retains its own natural glycerin, keeping your skin smooth and
+                            soothed.
+                            Each bar is made with vegan ingredients, with custom blends of essential and fragrant oils
+                            to
+                            add the wonderful scent that you will not find anywhere else. Our bars will last many weeks
+                            when
+                            cared for properly, so keep out of the flow or pool of water to extend its life!
+                        </p>
+                    </div>
                     <p>
-                        SoGa bars are handmade in small batches, with only vegan, sustainable oils used in their
-                        creation.
 
-                        Each handmade SoGa bar retains its own natural glycerin, keeping your skin smooth and soothed.
-                        Each bar is made with vegan ingredients, with custom blends of essential and fragrant oils to
-                        add the wonderful scent that you will not find anywhere else. Our bars will last many weeks when
-                        cared for properly, so keep out of the flow or pool of water to extend its life!
                     </p>
+
                 </div>
-                <p>
-
-                </p>
-
-            </div>
-            <div class="tabs__container-desc" id="pick2D">
-                <p>
-                    Weight: 130g
+                <div class="tabs__container-desc" id="pick2D">
+                    <p>
+                        Weight: 130g
 
 
-                </p>
-                <p>Dimensions: 9 x 6.5 x 2.5cm </p>
-                <p>Made With: Sodium Olivate, Sodium Cocoate, Sodium Ricate, Sodium Shea Butterate, Sodium Ricinoleate,
-                    glycerin, aqua, parfum, mica, titanium dioxide, tin oxide, iron oxides, parfum</p>
-            </div>
+                    </p>
+                    <p>Dimensions: 9 x 6.5 x 2.5cm </p>
+                    <p>Made With: Sodium Olivate, Sodium Cocoate, Sodium Ricate, Sodium Shea Butterate, Sodium
+                        Ricinoleate,
+                        glycerin, aqua, parfum, mica, titanium dioxide, tin oxide, iron oxides, parfum</p>
+                </div>
 
-        </section>
+            </section>
+        </div>
 
         <section class="product__recommend">
             <h2>You might also like</h2>
-            <div class="product__grid">
+            <div class="product__grid single">
                 <div class="card__product">
                     <div class="card--image">
                         <span class="overline">soap slice</span>
@@ -262,7 +291,7 @@
 
 
     </main>
-    <footer class="grid__section">
+    <footer class="grid__section footer">
         <div class="newsletter">
             <h4> Newsletter</h4>
             <fieldset>

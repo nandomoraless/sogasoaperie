@@ -58,6 +58,13 @@ $(document).ready(function () {
 
 
     });
+
+    $("#load-more").click(function () {
+        $(".page2").toggleClass("active");
+        $(".button--cart").addClass("hidden");
+
+
+    });
 });
 // Tabs
 

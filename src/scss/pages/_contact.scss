@@ -1,4 +1,13 @@
 // Contact
+.grid__section.contact {
+    grid-row: 1;
+    grid-column: span 4;
+}
+
+.grid__section.map {
+    grid-row: 2;
+    grid-column: span 4;
+}
 
 .contact__heading {
 
@@ -34,4 +43,42 @@ iframe {
     grid-column: 1 /span 4;
     border: 0;
     height: 300px;
+}
+
+@include for-tablet-landscape-up {
+    .grid__section.contact {
+        grid-row: 1;
+        grid-column: 2 / span 2;
+
+    }
+
+    .grid__section.map {
+        grid-row: 1;
+        grid-column: 4 / span 2;
+    }
+
+    .contact__heading {
+
+        grid-column: span 6;
+    }
+
+    .contact {
+        .button--primary {
+            grid-column: 4 / span 3;
+        }
+    }
+
+    .contact__form {
+
+        grid-row: 2;
+        grid-column: span 6;
+    }
+
+    .contact__heading--map {
+        grid-column: span 6;
+    }
+
+    iframe {
+        grid-column: span 6;
+    }
 }

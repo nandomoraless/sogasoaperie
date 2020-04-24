@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="./js/all.js"></script>
 
 </head>
@@ -19,9 +21,9 @@
             <div class="menu">
                 <span></span>
             </div>
-            <span class="notmenu">
-
-            </span>
+            <div class="cart">
+                <span></span>
+            </div>
         </div>
         <nav class="navbar-menu">
 
@@ -54,6 +56,29 @@
             </ul>
 
         </nav>
+
+        <div class="cart-menu">
+
+            <div class="cart-listing">
+
+                <span class="checkout-drawer__title">
+                    Your Cart
+                </span>
+                <div class="checkout-drawer__product">
+                    <img src="./images/product-images/product-blackraspberry.jpg"
+                        alt="checkout drawer product-blackraspberry">
+                    <span class="overline">Black Raspberry vanilla Artisan Bar</span>
+                    <a href="#"><img src="./images/close.svg" alt="close button" class="close-button"></a>
+                </div>
+                <a href="checkout.html" class="button--primary checkout--button">Checkout</a>
+
+            </div>
+
+
+        </div>
+
+
+        </div>
     </header>
     <main>
         <div class="img-container">
@@ -67,6 +92,42 @@
                 <p>
                     Soga Artisan Soaperie products are skin-softening and feel very silky and smooth to use
                 </p>
+            </div>
+
+            <div class="filters filters-1">
+
+                <label for="hair-body" class="overline"> Hair/Body
+                    <span class="checkmark"></span>
+                    <input type="radio" name="hair-body" value="hair-body">
+
+                </label>
+                <label for="Soap" class="overline"> Soap
+                    <span class="checkmark"></span>
+                    <input type="radio" name="soap" value="soap">
+
+                </label>
+                <label for="Bath" class="overline"> Hair/Body
+                    <span class="checkmark"></span>
+                    <input type="radio" name="bath" value="bath">
+
+                </label>
+            </div>
+            <div class="filters filters-2">
+                <label for="Lotion" class="overline"> Lotion
+                    <span class="checkmark"></span>
+                    <input type="radio" name="lotion" value="lotion">
+
+                </label>
+                <label for="Seasonal" class="overline"> Seasonal
+                    <span class="checkmark"></span>
+                    <input type="radio" name="seasonal" value="seasonal">
+
+                </label>
+                <label for="candles" class="overline"> Candles
+                    <span class="checkmark"></span>
+                    <input type="radio" name="candles" value="candles">
+
+                </label>
             </div>
 
 
@@ -231,12 +292,168 @@
                 </div>
 
             </div>
+            <a href="#page2" id="load-more" class="button--cart">Load more</a>
 
+        </section>
+
+        <section class="product__grid page2" id="page2">
+
+            <div class="card__product">
+                <div class="card--image">
+                    <span class="overline">Hair/Body</span>
+                    <img src="./images/product-images/product-lemonaidshampoo.jpeg" alt="Lemon Aid Conditioning">
+                </div>
+                <a href="product-single.html">
+                    <h6>
+                        Lemon Aid Conditioning Shampoo Bar
+                    </h6>
+                </a>
+
+                <div class="card--info">
+                    <ul>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                    </ul>
+                    <span class="overline overline--price">
+                        $19.99
+                    </span>
+                </div>
+
+            </div>
+            <div class="card__product">
+                <div class="card--image">
+                    <span class="overline">Bath</span>
+                    <img src="./images/product-images/product-bubblebathcupfakes.jpg" alt="Bubble Bath cupfakes">
+                </div>
+                <a href="product-single.html">
+                    <h6>
+                        Bubble Bath Cupfakes
+                    </h6>
+                </a>
+
+                <div class="card--info">
+                    <ul>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                    </ul>
+                    <span class="overline overline--price">
+                        $6.00
+                    </span>
+                </div>
+
+            </div>
+            <div class="card__product">
+                <div class="card--image">
+                    <span class="overline">Bath</span>
+                    <img src="./images/product-images/product-bathblackberry.jpeg" alt="Blackberry vanilla bath">
+                </div>
+                <a href="product-single.html">
+                    <h6>
+                        Black Raspberry Vanilla Bubble Bath
+                    </h6>
+                </a>
+
+                <div class="card--info">
+                    <ul>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                    </ul>
+                    <span class="overline overline--price">
+                        $20.00
+                    </span>
+                </div>
+
+            </div>
+            <div class="card__product">
+                <div class="card--image">
+                    <span class="overline">lotion</span>
+                    <img src="./images/product-images/product-lotionblackberry.jpg"
+                        alt="Black Raspberry Vanilla Lotion">
+                </div>
+                <a href="product-single.html">
+                    <h6>
+                        Black Raspberry Vanilla Lotion
+                    </h6>
+                </a>
+
+                <div class="card--info">
+                    <ul>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                    </ul>
+                    <span class="overline overline--price">
+                        $17.50
+                    </span>
+                </div>
+
+            </div>
+            <div class="card__product">
+                <div class="card--image">
+                    <span class="overline">lotion</span>
+                    <img src="./images/product-images/product-lotionsugar.jpg" alt="Sugar Lotion">
+                </div>
+                <a href="product-single.html">
+                    <h6>
+                        Sugar Lotion
+                    </h6>
+                </a>
+
+                <div class="card--info">
+                    <ul>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                    </ul>
+                    <span class="overline overline--price">
+                        $14.00
+                    </span>
+                </div>
+
+            </div>
+            <div class="card__product">
+                <div class="card--image">
+                    <span class="overline">soap slice</span>
+                    <img src="./images/product-images/product-candlecinnamon.jpg" alt="Water Artisan Soap Bar">
+                </div>
+                <a href="product-single.html">
+                    <h6>
+                        Cinnamon Buns Soy Candle
+                    </h6>
+                </a>
+
+                <div class="card--info">
+                    <ul>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                        <li><a href="" class="fa fa-star"></a></li>
+                    </ul>
+                    <span class="overline overline--price">
+                        $25.00
+                    </span>
+                </div>
+
+            </div>
 
         </section>
     </main>
 
-    <footer class="grid__section">
+    <footer class="grid__section footer">
         <div class="newsletter">
             <h4> Newsletter</h4>
             <fieldset>

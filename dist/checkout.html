@@ -60,214 +60,218 @@
         <section class="grid__section checkout__heading">
             <h1>Secure Checkout</h1>
         </section>
-        <section class="grid__section checkout__review">
+        <div class="grid__section checkout-page">
+            <section class="grid__form checkout__review">
 
-            <h2>1. Review your order</h2>
+                <h2>1. Review your order</h2>
 
 
 
-            <img class="checkout__image" src="./images/product-images/product-blackraspberry.jpg"
-                alt="Checkout Black Raspberry Soap Bar">
-            <div class="checkout__review--title">
-                <p>Black Raspberry Vanilla Artisan Bar</p>
-                <label for="checkout-quantity">QTY
-                    <input type="number" min="1" id="checkout-quantity" name="checkout-quantity">
+                <img class="checkout__image" src="./images/product-images/product-blackraspberry.jpg"
+                    alt="Checkout Black Raspberry Soap Bar">
+                <div class="checkout__review--title">
+                    <p>Black Raspberry Vanilla Artisan Bar</p>
+                    <label for="checkout-quantity">QTY
+                        <input type="number" min="1" id="checkout-quantity" name="checkout-quantity">
 
-                </label>
-            </div>
+                    </label>
+                </div>
 
-            <span class="checkout__review-price">$7.00</span>
+                <span class="checkout__review-price">$7.00</span>
 
-            <div class="checkout__review-subtotal">
+                <div class="checkout__review-subtotal">
+                    <span>
+                        SUBTOTAL
+                    </span>
+                    <span class="checkout__review-price">$7.00
+
+                    </span>
+                </div>
                 <span>
-                    SUBTOTAL
+                    SHIPPING
                 </span>
-                <span class="checkout__review-price">$7.00
-
-                </span>
-            </div>
-            <span>
-                SHIPPING
-            </span>
-            <div class=checkout__review-shipping>
+                <div class=checkout__review-shipping>
 
 
-                <label for="shipping-country">Country:</label>
-                <select name="shipping-country" id="shipping-country">
-                    <option value="canada">Canada</option>
-                    <option value="cont united states">Continental United States</option>
-                </select>
-                <label for="shipping-province">Province:</label>
-                <select name="shipping-province" id="shipping-province">
-                    <option value="manitoba">Manitoba</option>
+                    <label for="shipping-country">Country:</label>
+                    <select name="shipping-country" id="shipping-country">
+                        <option value="canada">Canada</option>
+                        <option value="cont united states">Continental United States</option>
+                    </select>
+                    <label for="shipping-province">Province:</label>
+                    <select name="shipping-province" id="shipping-province">
+                        <option value="manitoba">Manitoba</option>
 
-                </select>
-            </div>
+                    </select>
+                </div>
 
-            <span>DELIVERY METHOD</span>
-            <div class="checkout__review-delivery">
-                <span>$10.00</span>
-                <label for="delivery"> Regular 5-10 Business Days</label>
-                <input type="radio" name="delivery" id="delivery">
+                <span>DELIVERY METHOD</span>
+                <div class="checkout__review-delivery">
+                    <span>$10.00</span>
+                    <label for="delivery"> Regular 5-10 Business Days</label>
+                    <input type="radio" name="delivery" id="delivery">
 
-            </div>
+                </div>
 
-            <span>QUICK CHECKOUT </span>
+                <span>QUICK CHECKOUT </span>
 
-            <div id="paypal-button-container">
-                <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
-                    data-sdk-integration-source="button-factory"></script>
-                <script>
-                    paypal.Buttons({
-                        style: {
-                            shape: 'rect',
-                            color: 'gold',
-                            layout: 'vertical',
-                            label: 'paypal',
+                <div id="paypal-button-container">
+                    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
+                        data-sdk-integration-source="button-factory"></script>
+                    <script>
+                        paypal.Buttons({
+                            style: {
+                                shape: 'rect',
+                                color: 'gold',
+                                layout: 'vertical',
+                                label: 'paypal',
 
-                        },
-                        createOrder: function (data, actions) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        value: '1'
-                                    }
-                                }]
-                            });
-                        },
-                        onApprove: function (data, actions) {
-                            return actions.order.capture().then(function (details) {
-                                alert('Transaction completed by ' + details.payer.name.given_name +
-                                    '!');
-                            });
-                        }
-                    }).render('#paypal-button-container');
-                </script>
-            </div>
+                            },
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '1'
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (details) {
+                                    alert('Transaction completed by ' + details.payer.name
+                                        .given_name +
+                                        '!');
+                                });
+                            }
+                        }).render('#paypal-button-container');
+                    </script>
+                </div>
 
 
-        </section>
-        <section class="grid__section checkout__address">
-            <div class="checkout__address-heading">
+            </section>
+            <section class="grid__form checkout__address">
+                <div class="checkout__address-heading">
+                    <h2>
+                        2. Delivery Address
+                    </h2>
+                    <span class="overline">*Field Required</span>
+                </div>
+                <div class="checkout__address-form">
+                    <label for="checkout-email" class="overline">Email Address*</label>
+                    <input type="text" name="checkout-email" id="checkout-email" placeholder="janedoe@example.com"
+                        required>
+
+                    <label for="checkout-name" class="overline">Full Name*</label>
+                    <input type="text" name="checkout-name" id="checkout-name" placeholder="Jane Doe" required>
+
+                    <label for="checkout-phone" class="overline">Phone Number*</label>
+                    <input type="tel" name="checkout-phone" max="10" id="checkout-phone" placeholder="(123) 456-7890"
+                        required>
+
+                    <label for="checkout-street" class="overline">Street Address*</label>
+                    <input type="text" name="checkout-address" id="checkout-address"
+                        placeholder="eg Unit 1, 123 Main St." required>
+                    <input type="text" name="checkout-address" id="checkout-address" required>
+
+                    <label for="checkout-city" class="overline">City/Town*</label>
+                    <input type="text" name="checkout-city" id="checkout-city" required>
+
+
+                    <label for="checkout-province" class="overline">Province:</label>
+                    <select name="checkout-province" id="checkout-province">
+                        <option value="manitoba">Manitoba</option>
+
+                    </select>
+
+                    <label for="checkout-postal" class="overline">Postal Code*</label>
+                    <input type="text" name="checkout-postal" id="checkout-postal" required>
+
+                    <label for="checkout-country" class="overline">Country:</label>
+                    <select name="checkout-country" id="checkout-country">
+                        <option value="canada">Canada</option>
+                        <option value="cont united states">Continental United States</option>
+                    </select>
+
+                    <label for="billing-address" class="input-container">Same Billing Address
+                        <input type="radio" name="billing-address" id="billing-address">
+                        <span class="checkmark"></span></label>
+
+
+                </div>
+
+            </section>
+
+            <section class="grid__form checkout__payment">
                 <h2>
-                    2. Delivery Address
+                    3. Select Payment Method
                 </h2>
-                <span class="overline">*Field Required</span>
-            </div>
-            <div class="checkout__address-form">
-                <label for="checkout-email" class="overline">Email Address*</label>
-                <input type="text" name="checkout-email" id="checkout-email" placeholder="janedoe@example.com" required>
+                <div class="checkout__payment-method">
+                    <label for="payment-method">CREDIT CARD</label>
+                    <input type="radio" name="payment-method" id="payment-method">
 
-                <label for="checkout-name" class="overline">Full Name*</label>
-                <input type="text" name="checkout-name" id="checkout-name" placeholder="Jane Doe" required>
-
-                <label for="checkout-phone" class="overline">Phone Number*</label>
-                <input type="tel" name="checkout-phone" max="10" id="checkout-phone" placeholder="(123) 456-7890"
-                    required>
-
-                <label for="checkout-street" class="overline">Street Address*</label>
-                <input type="text" name="checkout-address" id="checkout-address" placeholder="eg Unit 1, 123 Main St."
-                    required>
-                <input type="text" name="checkout-address" id="checkout-address" required>
-
-                <label for="checkout-city" class="overline">City/Town*</label>
-                <input type="text" name="checkout-city" id="checkout-city" required>
-
-
-                <label for="checkout-province" class="overline">Province:</label>
-                <select name="checkout-province" id="checkout-province">
-                    <option value="manitoba">Manitoba</option>
-
-                </select>
-
-                <label for="checkout-postal" class="overline">Postal Code*</label>
-                <input type="text" name="checkout-postal" id="checkout-postal" required>
-
-                <label for="checkout-country" class="overline">Country:</label>
-                <select name="checkout-country" id="checkout-country">
-                    <option value="canada">Canada</option>
-                    <option value="cont united states">Continental United States</option>
-                </select>
-
-                <label for="billing-address" class="input-container">Same Billing Address
-                    <input type="radio" name="billing-address" id="billing-address">
-                    <span class="checkmark"></span></label>
-
-
-            </div>
-
-        </section>
-
-        <section class="grid__section checkout__payment">
-            <h2>
-                3. Select Payment Method
-            </h2>
-            <div class="checkout__payment-method">
-                <label for="payment-method">CREDIT CARD</label>
-                <input type="radio" name="payment-method" id="payment-method">
-
-            </div>
-            <div class="checkout__payment-method">
-                <label for="payment-method">DEBIT</label>
-                <input type="radio" name="payment-method" id="payment-method">
-
-            </div>
-            <h3>Order Summary</h3>
-            <div class="checkout__payment-summary">
-
-                <span class="summary-title">
-                    Black Raspberry Vanilla Artisan Bar
-                </span>
-
-                <span>
-                    QTY: 1
-                </span>
-
-                <span class="checkout__review-price">
-                    $7.00
-                </span>
-            </div>
-
-            <div class="checkout__payment-sub">
-                <div>
-                    <span>SUBTOTAL</span>
-                    <span class="checkout__review-price"> $7.00</span>
                 </div>
+                <div class="checkout__payment-method">
+                    <label for="payment-method">DEBIT</label>
+                    <input type="radio" name="payment-method" id="payment-method">
 
-                <div>
-                    <span>SHIPPING</span>
-                    <span class="checkout__review-price"> $10.00</span>
                 </div>
+                <h3>Order Summary</h3>
+                <div class="checkout__payment-summary">
 
-                <div>
-                    <span>
-                        SALES TAX
+                    <span class="summary-title">
+                        Black Raspberry Vanilla Artisan Bar
                     </span>
+
+                    <span>
+                        QTY: 1
+                    </span>
+
                     <span class="checkout__review-price">
-                        $2.04
+                        $7.00
                     </span>
+                </div>
+
+                <div class="checkout__payment-sub">
+                    <div>
+                        <span>SUBTOTAL</span>
+                        <span class="checkout__review-price"> $7.00</span>
+                    </div>
+
+                    <div>
+                        <span>SHIPPING</span>
+                        <span class="checkout__review-price"> $10.00</span>
+                    </div>
+
+                    <div>
+                        <span>
+                            SALES TAX
+                        </span>
+                        <span class="checkout__review-price">
+                            $2.04
+                        </span>
+
+                    </div>
+
+                    <div class="checkout__payment-total">
+                        <span>
+                            ORDER TOTAL
+                        </span>
+                        <span>
+                            $19.04
+                        </span>
+
+                    </div>
 
                 </div>
 
-                <div class="checkout__payment-total">
-                    <span>
-                        ORDER TOTAL
-                    </span>
-                    <span>
-                        $19.04
-                    </span>
-
-                </div>
-
-            </div>
-
-            <a href="#" class="button--primary">PAY NOW</a>
+                <a href="#" class="button--primary">PAY NOW</a>
 
 
-        </section>
+            </section>
+        </div>
 
     </main>
-    <footer class="grid__section">
+    <footer class="grid__section footer">
         <div class="newsletter">
             <h4> Newsletter</h4>
             <fieldset>

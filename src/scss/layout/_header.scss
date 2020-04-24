@@ -251,16 +251,24 @@ header {
 
 @include for-tablet-landscape-up {
 
+
     .navbar-menu-md {
         display: inline-block;
         position: absolute;
-
         width: 100%;
 
 
         .menu-listing li a {
             font-size: 1em;
             color: white;
+            line-height: unset;
+
+        }
+
+        .menu-listing li a:hover {
+            scale: 1.1;
+            line-height: unset;
+
         }
 
         .menu-listing li {
@@ -276,7 +284,23 @@ header {
         display: none;
     }
 
+    .cart-menu {
+        transform: translateX(100%);
+    }
 
+    .cart-menu.active {
+        transform: translateX(50%);
+    }
 
+    .cart-listing .checkout--button {
+        margin-left: 10px;
+    }
 
+    .cart-listing .checkout-drawer__product {
+        justify-content: flex-start;
+
+        >* {
+            margin-right: $half-gap;
+        }
+    }
 }

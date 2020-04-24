@@ -5,6 +5,8 @@ footer {
     background-color: $color-light-pink
 }
 
+
+
 .newsletter {
 
     grid-column: span 4;
@@ -104,4 +106,36 @@ input {
         }
     }
 
+}
+
+@include for-tablet-landscape-up {
+    footer {
+        .newsletter {
+            grid-column: span 2;
+        }
+
+        .social-media {
+            grid-column: span 1;
+
+            .social-media--icons {
+                border: unset;
+
+                .fa {
+                    width: 36px;
+                    height: 36px;
+                    font-size: 1em;
+                }
+            }
+        }
+
+        .quick-links {
+            grid-column: span 1;
+            border: unset;
+        }
+
+        .footer-contact {
+            grid-column: span 2;
+        }
+
+    }
 }

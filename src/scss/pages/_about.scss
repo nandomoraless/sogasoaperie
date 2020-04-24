@@ -88,3 +88,28 @@
         margin-right: auto;
     }
 }
+
+@include for-tablet-landscape-up {
+
+    .about__heading {
+        grid-column: 2 / span 3;
+    }
+
+
+
+    .story-1 {
+        grid-column: 4/span 2;
+    }
+
+    .story-2 {
+        grid-column: 2/span 3;
+    }
+
+    .story-3 {
+        grid-column: 4/span 2;
+    }
+
+    .story-4 {
+        grid-column: 2/span 2;
+    }
+}

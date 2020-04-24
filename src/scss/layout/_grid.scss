@@ -5,18 +5,33 @@ body {
 }
 
 .grid__section,
-.grid__product {
+.grid__product,
+.grid__form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $grid__gap;
     margin: $half-gap;
-    max-width: 1300px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.grid__section {
+
+
+.grid__section.footer {
+    max-width: unset;
+}
+
+.grid__section,
+.grid__section.footer {
     padding: 64px $half-gap;
 }
 
 .grid__product:not(.product__desc) {
     padding-top: 64px;
+}
+
+@include for-tablet-landscape-up {
+    .grid__section {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }

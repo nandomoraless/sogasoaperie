@@ -54,7 +54,7 @@ p {
 @include for-desktop-up {
 
     $base-font-size: 20px;
-    $font-scale: 14;
+    $font-scale: 8;
 
 
     @for $i from 1 through 6 {
